@@ -5421,8 +5421,8 @@ MonoBehaviour:
   gameControllerObj: {fileID: 0}
   gameCountDownScript: {fileID: 0}
   movementSpeed: 5
-  jumpSpeed: 20
-  gravity: 20
+  jumpSpeed: 15
+  gravity: 10
   playerHorizontalInput: Horizontal (Player1)
   playerVertivalInput: Vertical (Player1)
   playerJumpInput: Jump (Player1)
@@ -21765,7 +21765,7 @@ GameObject:
   - 114: {fileID: 1362174928}
   m_Layer: 0
   m_Name: Deathpit
-  m_TagString: Untagged
+  m_TagString: Deathpit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -22321,8 +22321,8 @@ MonoBehaviour:
   gameControllerObj: {fileID: 0}
   gameCountDownScript: {fileID: 0}
   movementSpeed: 5
-  jumpSpeed: 20
-  gravity: 20
+  jumpSpeed: 15
+  gravity: 10
   playerHorizontalInput: Horizontal (Player2)
   playerVertivalInput: Vertical (Player2)
   playerJumpInput: Jump (Player2)
