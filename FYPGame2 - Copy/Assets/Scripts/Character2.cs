@@ -81,8 +81,8 @@ public class Character2 : MonoBehaviour
         loop = false;
         loopDelay = 0.1f;
 
-        audioControllerObj = GameObject.Find("AudioController");
-        audioControllerScript = audioControllerObj.GetComponent<AudioFileController>();
+        //audioControllerObj = GameObject.Find("AudioController");
+        //audioControllerScript = audioControllerObj.GetComponent<AudioFileController>();
 
         // Check who is using this character
         CheckThisTag();
@@ -174,7 +174,7 @@ public class Character2 : MonoBehaviour
             timeDelay = Time.time + delayAmount;
             Rigidbody instantiatedProjectile = Instantiate(projectile, transform.position, transform.rotation) as Rigidbody;
 
-            audioControllerScript.PlaySound(audioControllerScript.magicianAttackSound);
+            //audioControllerScript.PlaySound(audioControllerScript.magicianAttackSound);
 
             // Give a tag to the projectile
             if (this.gameObject.tag == "PlayerOneRange")

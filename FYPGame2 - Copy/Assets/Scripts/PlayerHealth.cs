@@ -28,8 +28,8 @@ public class PlayerHealth : MonoBehaviour {
         lastManStandingGameObj = GameObject.Find("GameController");
         lastManStandingScript = lastManStandingGameObj.GetComponent<LastManStanding>();
 
-        audioControllerObj = GameObject.Find("AudioController");
-        audioControllerScript = audioControllerObj.GetComponent<AudioFileController>();
+        //audioControllerObj = GameObject.Find("AudioController");
+        //audioControllerScript = audioControllerObj.GetComponent<AudioFileController>();
 
         playVictorySound = false;
     }
