@@ -24,6 +24,9 @@ public class Character3 : MonoBehaviour {
     public GameObject thisMovementObj;
     public BasicPlayerMovement thisMovementScript;
 
+    // Skill button
+    public bool isUsingSkill;
+
     // String for attack button
     public string playerAttackInput = "";
 
@@ -46,6 +49,8 @@ public class Character3 : MonoBehaviour {
     {
         gameControllerObj = GameObject.Find("GameController");
         gameCountDownScript = gameControllerObj.GetComponent<ArenaCountDownStart>();
+
+        isUsingSkill = false;
 
         loop = false;
         loopDelay = 0.1f;
@@ -84,6 +89,16 @@ public class Character3 : MonoBehaviour {
     void Update()
     {
         //print(loopDelay);
+
+        // Player using skill
+        if (Input.GetButtonDown(playerSkillInput) && gameCountDownScript.startMatch == true && thisMovementScript.isStunned == false)
+        {
+            // Disable skill usage when the game is paused
+            if (Time.timeScale != 0)
+            {
+                isUsingSkill = true;
+            }
+        }
 
         if (Input.GetButtonDown(playerAttackInput) && Time.time > timeDelay && gameCountDownScript.startMatch == true && thisMovementScript.isStunned == false)
         {
