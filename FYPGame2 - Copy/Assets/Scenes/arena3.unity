@@ -215,6 +215,7 @@ MonoBehaviour:
   projectile: {fileID: 5491006, guid: 03205a81edb76ab4b8bbe2e26fe38259, type: 2}
   thisMovementObj: {fileID: 0}
   thisMovementScript: {fileID: 0}
+  isUsingSkill: 0
   playerAttackInput: Attack (Player2)
   playerSkillInput: Skill (Player2)
   playerBlockInput: Block (Player2)
@@ -882,6 +883,7 @@ GameObject:
   - 23: {fileID: 389556290}
   - 143: {fileID: 389556289}
   - 114: {fileID: 389556288}
+  - 114: {fileID: 389556292}
   m_Layer: 0
   m_Name: Player1
   m_TagString: PlayerOne
@@ -896,7 +898,7 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 389556287}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 38d858413214cee48839bfe1401ad762, type: 3}
   m_Name: 
@@ -904,8 +906,8 @@ MonoBehaviour:
   gameControllerObj: {fileID: 0}
   gameCountDownScript: {fileID: 0}
   movementSpeed: 5
-  jumpSpeed: 20
-  gravity: 20
+  jumpSpeed: 15
+  gravity: 10
   playerHorizontalInput: Horizontal (Player1)
   playerVertivalInput: Vertical (Player1)
   playerJumpInput: Jump (Player1)
@@ -967,6 +969,30 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 389556287}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &389556292
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 389556287}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cdc6ef9f5f983864185db4605b6aa456, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameControllerObj: {fileID: 0}
+  gameCountDownScript: {fileID: 0}
+  movementSpeed: 5
+  jumpSpeed: 15
+  gravity: 10
+  playerHorizontalInput: Horizontal (Player1)
+  playerVertivalInput: Vertical (Player1)
+  playerJumpInput: Jump (Player1)
+  isBlocking: 0
+  playerBlockInput: Block (Player1)
+  blockFeedbObject: {fileID: 370699538}
+  isStunned: 0
+  stunDelay: 0
 --- !u!1 &427620689
 GameObject:
   m_ObjectHideFlags: 0
@@ -2196,6 +2222,7 @@ MonoBehaviour:
   projectile: {fileID: 5491006, guid: 03205a81edb76ab4b8bbe2e26fe38259, type: 2}
   thisMovementObj: {fileID: 0}
   thisMovementScript: {fileID: 0}
+  isUsingSkill: 0
   playerAttackInput: Attack (Player1)
   playerSkillInput: Skill (Player1)
   playerBlockInput: Block (Player1)
@@ -3459,6 +3486,7 @@ GameObject:
   - 23: {fileID: 1381407024}
   - 143: {fileID: 1381407023}
   - 114: {fileID: 1381407022}
+  - 114: {fileID: 1381407027}
   m_Layer: 0
   m_Name: Player2
   m_TagString: PlayerTwo
@@ -3473,7 +3501,7 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1381407021}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 38d858413214cee48839bfe1401ad762, type: 3}
   m_Name: 
@@ -3481,8 +3509,8 @@ MonoBehaviour:
   gameControllerObj: {fileID: 0}
   gameCountDownScript: {fileID: 0}
   movementSpeed: 5
-  jumpSpeed: 20
-  gravity: 20
+  jumpSpeed: 15
+  gravity: 10
   playerHorizontalInput: Horizontal (Player2)
   playerVertivalInput: Vertical (Player2)
   playerJumpInput: Jump (Player2)
@@ -3561,6 +3589,30 @@ Transform:
   - {fileID: 2036481700}
   m_Father: {fileID: 0}
   m_RootOrder: 5
+--- !u!114 &1381407027
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1381407021}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cdc6ef9f5f983864185db4605b6aa456, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameControllerObj: {fileID: 0}
+  gameCountDownScript: {fileID: 0}
+  movementSpeed: 5
+  jumpSpeed: 15
+  gravity: 10
+  playerHorizontalInput: Horizontal (Player2)
+  playerVertivalInput: Vertical (Player2)
+  playerJumpInput: Jump (Player2)
+  isBlocking: 0
+  playerBlockInput: Block (Player2)
+  blockFeedbObject: {fileID: 2036481696}
+  isStunned: 0
+  stunDelay: 0
 --- !u!1 &1462330815
 GameObject:
   m_ObjectHideFlags: 0

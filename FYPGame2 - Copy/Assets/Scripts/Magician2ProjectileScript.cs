@@ -14,6 +14,9 @@ public class Magician2ProjectileScript : MonoBehaviour
     public GameObject healthObj;
     public PlayerHealth healthScript;
 
+    // Access to the shooter's object
+    public GameObject playerObj;
+
     // Access to opponent's movement script and see if it is blocking or not
     public GameObject opponentMovementObj;
     public BasicPlayerMovement opponentMovementScript;
@@ -42,11 +45,15 @@ public class Magician2ProjectileScript : MonoBehaviour
 
             opponentProjectileTag = "PlayerTwoProjectile";
 
+            playerObj = GameObject.Find("Player1");
+
             opponentMovementObj = GameObject.Find("Player2");
             opponentMovementScript = opponentMovementObj.GetComponent<BasicPlayerMovement>();
 
             shooterObj = GameObject.Find("P1AttackRange");
             shooterScript = shooterObj.GetComponent<Character3>();
+
+            shooterScript.isUsingSkill = false;
         }
         // If the projectile is shot from Player2
         if (this.gameObject.tag == "PlayerTwoProjectile")
@@ -56,11 +63,15 @@ public class Magician2ProjectileScript : MonoBehaviour
 
             opponentProjectileTag = "PlayerOneProjectile";
 
+            playerObj = GameObject.Find("Player2");
+
             opponentMovementObj = GameObject.Find("Player1");
             opponentMovementScript = opponentMovementObj.GetComponent<BasicPlayerMovement>();
 
             shooterObj = GameObject.Find("P2AttackRange");
             shooterScript = shooterObj.GetComponent<Character3>();
+
+            shooterScript.isUsingSkill = false;
         }
     }
 
@@ -70,6 +81,13 @@ public class Magician2ProjectileScript : MonoBehaviour
         //print(character1Script.isTouchingPlayer2);
         //print(gameObj2.tag);
         Destroy(this.gameObject, 0.25f);
+
+        if (shooterScript.isUsingSkill == true)
+        {
+            shooterScript.isUsingSkill = false;
+            playerObj.transform.position = transform.position;
+            Destroy(this.gameObject);
+        }
     }
 
     void OnTriggerEnter(Collider enemy)
